@@ -1,0 +1,35 @@
+#server configuration
+server:
+    port: 7080
+    error:
+        include-stacktrace: never
+
+#spring configuration
+spring:
+
+#image configuration size
+    servlet: 
+        multipart: 
+            max-file-size: 10MB
+            max-request-size: 10MB
+#datasource
+    datasource:
+        url: jdbc:mysql://localhost/template-api
+        username: root
+        password: Alness12!
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa: 
+        show-sql: true
+        hibernate: 
+            #ddl-auto: create
+
+#Open api swagger ui 
+springdoc: 
+    api-docs: 
+        path: /api-docs
+
+#prefix endpoints configuration
+apiPrefix: /api 
+
+#secret jwt
+secret: ItSDaNG3r0UsT06oAl0n3TaK3ThIs
